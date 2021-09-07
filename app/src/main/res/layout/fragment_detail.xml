@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     android:background="#0C000000">
 
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/cvContact"
+        tools:srcCompat="@tools:sample/avatars" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cvContact"
         android:layout_width="match_parent"
@@ -15,7 +26,7 @@
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/ivImage">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

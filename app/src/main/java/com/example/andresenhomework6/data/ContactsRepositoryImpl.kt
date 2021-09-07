@@ -18,6 +18,7 @@ object ContactsRepositoryImpl : ContactsRepository {
         listOf("Иванов", "Петров", "Ивакин", "Тихомиров",
             "Грузнев", "Батутин", "Носков", "Рубалёв", "Герасимов")
 
+
     private var autoIncrementId = 0
 
     // хардкод добавление контактов
@@ -26,7 +27,8 @@ object ContactsRepositoryImpl : ContactsRepository {
             val item = Contact(
                 firstNamesList.random(),
                 lastNamesList.random(),
-                (89000000000 + (Math.random() * 999999999)).toLong()
+                (89000000000 + (Math.random() * 999999999)).toLong(),
+                "https://picsum.photos/id/${i + 1}/300/300"
             )
             addContact(item)
         }
