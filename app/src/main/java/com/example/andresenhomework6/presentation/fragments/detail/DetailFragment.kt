@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.andresenhomework6.databinding.FragmentDetailBinding
 import com.example.andresenhomework6.domain.entity.Contact
+import com.squareup.picasso.Picasso
 
 class DetailFragment: Fragment() {
 
@@ -49,6 +50,7 @@ class DetailFragment: Fragment() {
                     etName.setText(it.firstName)
                     etLastName.setText(it.lastName)
                     etPhoneNumber.setText(it.numberPhone.toString())
+                    Picasso.get().load(it.image).into(ivImage)
                 }
             }
 
