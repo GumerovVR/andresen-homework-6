@@ -1,4 +1,4 @@
-package com.example.andresenhomework6.presentation
+package com.example.andresenhomework6.presentation.fragments.contacts
 
 import androidx.lifecycle.ViewModel
 import com.example.andresenhomework6.data.ContactsRepositoryImpl

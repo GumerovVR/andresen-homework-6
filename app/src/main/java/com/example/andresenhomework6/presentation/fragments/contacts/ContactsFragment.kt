@@ -1,8 +1,6 @@
-package com.example.andresenhomework6.presentation
+package com.example.andresenhomework6.presentation.fragments.contacts
 
-import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.andresenhomework6.R
 import com.example.andresenhomework6.databinding.FragmentContactsBinding
-import com.example.andresenhomework6.domain.entity.Contact
+import com.example.andresenhomework6.presentation.fragments.detail.DetailFragment
 import com.example.andresenhomework6.presentation.adapter.ContactsAdapter
 
 class ContactsFragment : Fragment() {
