@@ -5,19 +5,29 @@ import androidx.lifecycle.MutableLiveData
 import com.example.andresenhomework6.domain.entity.Contact
 import com.example.andresenhomework6.domain.repository.ContactsRepository
 
-object ContactsRepositoryImpl: ContactsRepository {
+object ContactsRepositoryImpl : ContactsRepository {
 
     private val contactsListLD = MutableLiveData<List<Contact>>()
     private val contactsList = sortedSetOf<Contact>(
         { o1, o2 -> o1.id.compareTo(o2.id) })
+    private val firstNamesList =
+        listOf("Артем", "Владислав", "Егор", "Ержан", "Антон",
+            "Петр", "Ян", "Федор", "Максим", "Данил", "Александр",
+            "Николай", "Вадим", "Роман")
+    private val lastNamesList =
+        listOf("Иванов", "Петров", "Ивакин", "Тихомиров",
+            "Грузнев", "Батутин", "Носков", "Рубалёв", "Герасимов")
 
     private var autoIncrementId = 0
 
+    // хардкод добавление контактов
     init {
-        for(i in 0 until 100) {
-            val item = Contact("Name $i",
-                "Lastname $i",
-                (89000000000 + (Math.random() * 999999999)).toLong())
+        for (i in 0 until 100) {
+            val item = Contact(
+                firstNamesList.random(),
+                lastNamesList.random(),
+                (89000000000 + (Math.random() * 999999999)).toLong()
+            )
             addContact(item)
         }
     }
@@ -54,4 +64,6 @@ object ContactsRepositoryImpl: ContactsRepository {
     private fun updateContacts() {
         contactsListLD.value = contactsList.toList()
     }
+
+
 }
