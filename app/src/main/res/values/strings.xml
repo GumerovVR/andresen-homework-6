@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AndresenHomeWork6</string>
+    <string name="name_label">Имя:</string>
+    <string name="last_name_label">Фамилия:</string>
+    <string name="phone_label">Номер:</string>
+    <string name="btn_save">Сохранить</string>
 </resources>

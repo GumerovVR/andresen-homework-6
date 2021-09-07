@@ -10,4 +10,8 @@ interface ContactsRepository {
     fun getContacts(): LiveData<List<Contact>>
 
     fun getContact(contactId: Int): Contact
+
+    fun editContact(contact: Contact)
+
+    fun addContact(contact: Contact)
 }
